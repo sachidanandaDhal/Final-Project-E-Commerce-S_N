@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details | Annalect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/f390425e8d.js" crossorigin="anonymous"></script>
+    
+    
+
+</head>
+
+<body>
+
+    
+    <!-- -----------Account-Page------------------->
+    <div class="account-page">
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/login.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input class="input-field" type="text" placeholder="Username" id="login-username" required>
+                            <input class="input-field" type="password" placeholder="Password" id="login-password" required>
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password ?</a>
+                        </form>
+                        <form id="RegForm">
+                            <input class="input-field" type="text" placeholder="Username" id="username" required>
+                            <input class="input-field" type="email" placeholder="Email">
+                            <input class="input-field" type="password" placeholder="Password"  id="password" required>
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    
+    <!-- ----------------JS for toggle form --------- -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+
+
+       
+    </script>
+    <script>
+        const registerForm = document.getElementById("RegForm");
+    const loginForm = document.getElementById("LoginForm");
+    
+    registerForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    
+        if (!localStorage.getItem(username)) {
+            localStorage.setItem(username, password);
+            alert("Registration successful!");
+        } else {
+            alert("Username already exists. Please choose a different username.");
+        }
+    });
+    
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const username = document.getElementById("login-username").value;
+        const password = document.getElementById("login-password").value;
+    
+        if (localStorage.getItem(username) === password) {
+            alert("Login successful!");
+            window.location.href = "index.html";
+        } else {
+            alert("Incorrect username or password. Please try again.");
+        }
+    }); 
+        </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
