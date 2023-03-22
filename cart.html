@@ -194,9 +194,9 @@
             document.getElementById(
                 "subtotal-section"
             ).innerHTML = `<table><tr><td>Subtotal</td><td>Rs. ${subTotal}</td></tr><tr><td>GST</td><td>Rs. ${Number(
-        (subTotal / 7.78).toFixed(2)
+        (subTotal / 5.78).toFixed(2)
       )}</td></tr><tr><td>Total</td><td>Rs. ${Number(
-        (subTotal + subTotal / 7.78).toFixed(2)
+        (subTotal + subTotal / 5.78).toFixed(2)
       )}</td></tr></table>`;
         }
         renderItemsAndCosts(); //rendering the cart items and the costs initially
