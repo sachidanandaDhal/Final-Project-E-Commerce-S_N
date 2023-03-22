@@ -131,7 +131,7 @@ nav {
 nav li {
     display: inline-block;
     position: relative;
-    color: #ff523b;
+    color: #413bff;
 }
 
 nav li:after {
@@ -142,7 +142,7 @@ nav li:after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ff523b;
+    background-color: #3b48ff;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -268,7 +268,7 @@ p {
 
 .btn {
     display: inline-block;
-    background-color: #ff523b;
+    background-color: #2431f0;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 60px;
@@ -280,7 +280,7 @@ p {
 }
 
 .btn:hover {
-    background: #eb0505;
+    background: #eb05d8;
 }
 
 .header {
@@ -673,8 +673,8 @@ table {
 th {
     text-align: left;
     padding: 5px;
-    color: #fff;
-    background-color: #ff523b;
+    color: #ffffff;
+    background-color: #0c0900;
     font-weight: normal;
 }
 
@@ -1262,7 +1262,7 @@ body.active {
     font-size: 24px;
     border-radius: 5%;
     cursor: pointer;
-    background-color: #ff523b;
+    background-color: #0e0e0e;
     color: #fff;
     margin-left: -10px;
     border: 1px solid black;
